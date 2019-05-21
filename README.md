@@ -6,21 +6,13 @@
 2. Подключить его к  [cirlceCI](https://circleci.com). Можно залогиниться через гитхаб и дать доступ
 к своему аккаунту на гитхаб.
 3. Затем надо добавить форкнутый репозиторий. <space><space>
-<div id="container">
 <img src="pictures/choose_project.png" width="1200px"/>
-</div>
 4. При первом заходе в `circleCI` сразу же начнется билд и он будет красным.
-<div id="container">
 <img src="pictures/failed_builds.png" width="1200px"/>
-</div>
 5. Если щелкнуть на одном из билдов, то можно увидеть на чем завалились тесты. Должно быть 4 падения.
-<div id="container">
 <img src="pictures/failed_test.png" width="1200px"/>
-</div>
 6. На вкладке `Artifacts` можно скачать сбилженый apk и результаты тестов.
-<div id="container">
 <img src="pictures/artifacts.png" width="1200px"/>
-</div>
 7. При каждом пуше на гитхаб запускается билд в `circleCI`. Все настройки для запуска лежат здесь
 [a circleCI settings](https://github.com/gopito/CiHomeTask/blob/master/.circleci/config.yml)
 
