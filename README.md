@@ -14,7 +14,7 @@
 6. На вкладке `Artifacts` можно скачать сбилженый apk и результаты тестов.
 ![Artifacts](https://github.com/gopito/CiHomeTask/blob/master/pictures/artifacts.png)
 7. При каждом пуше на гитхаб запускается билд в `circleCI`. Все настройки для запуска лежат здесь
-[a circleCI settings](https://github.com/gopito/CiHomeTask/blob/master/.circleci/config.yml)
+[circleCI settings](https://github.com/gopito/CiHomeTask/blob/master/.circleci/config.yml)
 
 
 Смысл домашки в том чтобы поправить приложение так чтобы все тесты проходили. Это будет видно на 
