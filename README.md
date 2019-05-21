@@ -9,7 +9,7 @@
 <div id="container">
 <img src="pictures/choose_project.png" width="1200px"/>
 </div>
-4. При первом заходе в __circleCI__ сразу же начнется билд и он будет красным.
+4. При первом заходе в `circleCI` сразу же начнется билд и он будет красным.
 <div id="container">
 <img src="pictures/failed_builds.png" width="1200px"/>
 </div>
@@ -17,11 +17,11 @@
 <div id="container">
 <img src="pictures/failed_test.png" width="1200px"/>
 </div>
-6. На вкладке __Artifacts__ можно скачать сбилженый apk и результаты тестов.
+6. На вкладке `Artifacts` можно скачать сбилженый apk и результаты тестов.
 <div id="container">
 <img src="pictures/artifacts.png" width="1200px"/>
 </div>
-7. При каждом пуше на гитхаб запускается билд в __circleCI__. Все настройки для запуска лежат здесь
+7. При каждом пуше на гитхаб запускается билд в `circleCI`. Все настройки для запуска лежат здесь
 [a circleCI settings](https://github.com/gopito/CiHomeTask/blob/master/.circleci/config.yml)
 
 
