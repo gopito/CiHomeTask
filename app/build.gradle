@@ -1,0 +1,79 @@
+/*
+ * Copyright 2016, The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion rootProject.buildToolsVersion
+    defaultConfig {
+        applicationId "com.example.android.testing.espresso.RecyclerViewSample"
+        minSdkVersion 14
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        abortOnError false
+    }
+    testOptions {
+        // Encapsulates options for local unit tests.
+        unitTests {
+            //For Robolectric
+            includeAndroidResources = true
+
+            // Encapsulates options for controlling how Gradle executes local unit tests. For a list
+            // of all the options you can specify, read
+            all {
+                testLogging {
+                    events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+                }
+                //The maximum number of test processes to start in parallel.
+                //Можем запустить 3 тестовых класса папраллельно
+                maxParallelForks = 3
+
+                reports.html.enabled = true
+                reports.junitXml.enabled = false
+
+                //Чтобы Robolectric не выкачивал из инета джарники при старте тестов
+                systemProperty 'robolectric.offline', true
+                systemProperty 'robolectric.logging.enabled', true
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+
+dependencies {
+    // App dependencies
+    implementation 'androidx.annotation:annotation:' + rootProject.androidxLibVersion;
+    implementation 'androidx.recyclerview:recyclerview:' + rootProject.androidxLibVersion;
+
+    // Testing-only dependencies
+    testImplementation 'org.robolectric:robolectric:' + rootProject.robolectric;
+    testImplementation 'androidx.test:core:' + rootProject.coreVersion;
+    testImplementation 'androidx.test.ext:junit:' + rootProject.extJUnitVersion;
+    testImplementation 'androidx.test:runner:' + rootProject.runnerVersion;
+    testImplementation 'androidx.test.espresso:espresso-core:' + rootProject.espressoVersion;
+    testImplementation 'androidx.test.espresso:espresso-contrib:' + rootProject.espressoVersion;
+
+}
