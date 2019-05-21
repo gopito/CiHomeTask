@@ -1,7 +1,3 @@
----
-layout: default
-title: Домашнее задание по тестированию и CI
----
 [![CircleCI](https://circleci.com/gh/gopito/CiHomeTask.svg?style=svg)](https://circleci.com/gh/gopito/CiHomeTask)
 ## Домашнее задание по тестированию и CI
 Для выполнения задания надо форкнуть себе репозиторий и поправить ошибки в приложении, чтобы все тесты
