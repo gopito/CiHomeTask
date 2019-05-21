@@ -1,1 +1,1 @@
-![AppVeyor tests](https://img.shields.io/appveyor/tests/gopito/CiHomeTask.svg)
+[![CircleCI](https://circleci.com/gh/gopito/CiHomeTask.svg?style=svg)](https://circleci.com/gh/gopito/CiHomeTask)
