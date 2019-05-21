@@ -48,8 +48,8 @@ android {
                 //Можем запустить 3 тестовых класса папраллельно
                 maxParallelForks = 3
 
-                reports.html.enabled = true
-                reports.junitXml.enabled = false
+                reports.html.enabled = false
+                reports.junitXml.enabled = true
 
                 //Чтобы Robolectric не выкачивал из инета джарники при старте тестов
                 systemProperty 'robolectric.offline', true
