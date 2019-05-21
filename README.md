@@ -1,1 +1,1 @@
-lol
+![AppVeyor tests](https://img.shields.io/appveyor/tests/gopito/CiHomeTask.svg)
