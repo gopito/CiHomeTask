@@ -29,7 +29,16 @@ jobs:
             mkdir -p ~/test-results/junit/
             find . -type f -regex ".*/build/test-results/.*xml" -exec cp {} ~/test-results/junit/ \;
           when: always
+      - run:
+          name: Save apk
+          command: |
+            ./gradlew assembleDebug
+            mkdir -p ~/apks/
+            find . -type f -regex ".*/build/outputs/apk/debug/.*apk" -exec cp {} ~/apks/ \;
+          when: always
       - store_test_results:
           path: ~/test-results
       - store_artifacts:
           path: ~/test-results/junit
+      - store_artifacts:
+          path: ~/apks
