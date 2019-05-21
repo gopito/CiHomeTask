@@ -29,7 +29,8 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
-        abortOnError false
+        disable 'GoogleAppIndexingWarning'
+        abortOnError true
     }
     testOptions {
         // Encapsulates options for local unit tests.
