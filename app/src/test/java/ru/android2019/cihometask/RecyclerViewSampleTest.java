@@ -68,7 +68,7 @@ public class RecyclerViewSampleTest {
     @Test
     public void toggleTextTest() {
         //Небольшой костыль, чтобы читаемая ошибка была
-        Espresso.setFailureHandler(new ClickFailureHandler());
+       // Espresso.setFailureHandler(new ClickFailureHandler());
         RecyclerViewMatcher recyclerViewMatcher = new RecyclerViewMatcher(R.id.recyclerView);
         Matcher<View> buttonMatcher = recyclerViewMatcher.atPositionOnView(0, R.id.button);
         Matcher<View> textMatcher = recyclerViewMatcher.atPositionOnView(0, R.id.textView);
@@ -77,7 +77,7 @@ public class RecyclerViewSampleTest {
         onView(textMatcher).check(matches(withText(CLICKED_TEXT)));
 
         onView(buttonMatcher).perform(click());
-        onView(textMatcher).check(matches(withText(NOT_CLICKED_TEXT)));
+        onView(textMatcher).check(matches(withText(NOT_CLICKED_TEXT))); // not working also with onView(textMatcher).check(matches(withText(MIDDLE_ELEMENT_TEXT )));
 
         onView(buttonMatcher).perform(click());
         onView(textMatcher).check(matches(withText(CLICKED_TEXT)));
@@ -145,6 +145,4 @@ public class RecyclerViewSampleTest {
                     ,MIDDLE_ELEMENT_TEXT, applicationContext.getString(R.string.middle))), viewMatcher);
         }
     }
-
-
 }

@@ -30,9 +30,9 @@ public class MainActivity extends Activity {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
 
-        List<String> dataSet = new ArrayList<>(DATASET_COUNT);
+        List<String> dataSet = new ArrayList<>();
         for (int i = 0; i < DATASET_COUNT; i++) {
-            dataSet.add(getString(R.string.item_element_text) + i);
+            dataSet.add(getString(R.string.item_element_text));
         }
         CustomAdapter adapter = new CustomAdapter(dataSet, getApplicationContext());
         recyclerView.setAdapter(adapter);
