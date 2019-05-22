@@ -145,7 +145,8 @@ public class RecyclerViewSampleTest {
         @Override
         public void handle(final Throwable error, final Matcher<View> viewMatcher) {
 
-            delegate.handle(new Exception(String.format("Искали \"%s\" a нашли \"%s\""
+            delegate.handle(new Exception(String.format("Искали \"%s\" a нашли \"%s\"\n\r" +
+                            "Загляните в строковые ресурсы"
                     ,MIDDLE_ELEMENT_TEXT, applicationContext.getString(R.string.middle))), viewMatcher);
         }
     }
