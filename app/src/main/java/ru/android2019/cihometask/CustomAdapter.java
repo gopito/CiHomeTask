@@ -102,9 +102,7 @@ import java.util.List;
                     viewHolder.getTextView().setText(mDataSet.get(position));
                     viewHolder.setClicked(false);
                 } else {
-                    final String txt = viewHolder.getTextView().getText().toString();
-                    final String result = txt + position + " Clicked";
-                    viewHolder.getTextView().setText(result);
+                    viewHolder.getTextView().setText(String.format("%s %s", mDataSet.get(position), "Clicked"));
                     viewHolder.setClicked(true);
                 }
 
