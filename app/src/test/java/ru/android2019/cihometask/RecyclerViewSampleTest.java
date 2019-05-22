@@ -70,7 +70,7 @@ public class RecyclerViewSampleTest {
     @Test
     public void toggleTextTest() {
         //Небольшой костыль, чтобы читаемая ошибка была
-       // Espresso.setFailureHandler(new ClickFailureHandler());
+        Espresso.setFailureHandler(new ClickFailureHandler());
         RecyclerViewMatcher recyclerViewMatcher = new RecyclerViewMatcher(R.id.recyclerView);
         Matcher<View> buttonMatcher = recyclerViewMatcher.atPositionOnView(0, R.id.button);
         Matcher<View> textMatcher = recyclerViewMatcher.atPositionOnView(0, R.id.textView);
