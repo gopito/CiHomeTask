@@ -39,6 +39,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.annotation.Config;
 
+import ru.android2019.cihometask.failureHandler.CustomFailureHandler;
+
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
@@ -124,7 +126,9 @@ public class RecyclerViewSampleTest {
         public void handle(final Throwable error, final Matcher<View> viewMatcher) {
             delegate.handle(new Exception("Надо поправить android.view.View.OnClickListener.onClick в " +
                     "CustomAdapter.\n\r" +
-                    String.format("Получили текст \"%s\" хотя ожидали \"%s\"", NOT_CLICKED_TEXT, CLICKED_TEXT)), viewMatcher);
+                    "В \"Got:\" надо обратить внимание на \"text=\" и сравнить с \"Expected\"\n\r" +
+                    "~~~Ошибка Espresso:\n\r" +
+                    error.getLocalizedMessage(),error.getCause()), viewMatcher);
         }
     }
 
@@ -141,7 +145,8 @@ public class RecyclerViewSampleTest {
         @Override
         public void handle(final Throwable error, final Matcher<View> viewMatcher) {
 
-            delegate.handle(new Exception(String.format("Искали \"%s\" a нашли \"%s\""
+            delegate.handle(new Exception(String.format("Искали \"%s\" a нашли \"%s\"\n\r" +
+                            "Загляните в строковые ресурсы"
                     ,MIDDLE_ELEMENT_TEXT, applicationContext.getString(R.string.middle))), viewMatcher);
         }
     }
