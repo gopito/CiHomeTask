@@ -79,7 +79,7 @@ public class RecyclerViewSampleTest {
         onView(textMatcher).check(matches(withText(CLICKED_TEXT)));
 
         onView(buttonMatcher).perform(click());
-        onView(textMatcher).check(matches(withText(NOT_CLICKED_TEXT)));
+        onView(textMatcher).check(matches(withText(NOT_CLICKED_TEXT))); // not working also with onView(textMatcher).check(matches(withText(MIDDLE_ELEMENT_TEXT )));
 
         onView(buttonMatcher).perform(click());
         onView(textMatcher).check(matches(withText(CLICKED_TEXT)));
@@ -150,6 +150,4 @@ public class RecyclerViewSampleTest {
                     ,MIDDLE_ELEMENT_TEXT, applicationContext.getString(R.string.middle))), viewMatcher);
         }
     }
-
-
 }
