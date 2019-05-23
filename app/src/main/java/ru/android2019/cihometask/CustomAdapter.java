@@ -100,6 +100,7 @@ import java.util.List;
             public void onClick(View v) {
                 if (viewHolder.isClicked) {
                     viewHolder.getTextView().setText(mDataSet.get(position));
+					viewHolder.setClicked(false);
                 } else {
                     viewHolder.getTextView().setText(String.format("%s %s", mDataSet.get(position), "Clicked"));
                     viewHolder.setClicked(true);
@@ -111,13 +112,13 @@ import java.util.List;
     }
 
     int getMiddleIndex() {
-        return mDataSet.size() / 3;
+        return mDataSet.size() / 2;
     }
 
     // Return the size of your data set (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return mDataSet.size() - 1;
+        return mDataSet.size();
     }
 
 }
