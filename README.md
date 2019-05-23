@@ -15,7 +15,17 @@
 ![Artifacts](https://github.com/gopito/CiHomeTask/blob/master/pictures/artifacts.png)
 7. При каждом пуше на гитхаб запускается билд в `circleCI`. Все настройки для запуска лежат здесь
 [circleCI settings](https://github.com/gopito/CiHomeTask/blob/master/.circleci/config.yml)
-
+8. В файле `README.md` надо поправить
+`[![CircleCI](https://circleci.com/gh/gopito/CiHomeTask.svg?style=svg)](https://circleci.com/gh/gopito/CiHomeTask)`.
+Это первая строчка. Надо поменять `gopito` на свое имя пользователя в гитхабе.
+![Badge](https://github.com/gopito/CiHomeTask/blob/master/pictures/badge.png)
+Можно сгенерировать эту строчку на самом [cirlceCI](https://circleci.com).
+Надо нажать на шестеренку
+![CircleCi settings](https://github.com/gopito/CiHomeTask/blob/master/pictures/circleci_settings.png)
+Потом на `Status Badges`
+![Status badges](https://github.com/gopito/CiHomeTask/blob/master/pictures/status_badges.png)
+и скопировать строчку
+![Badge string](https://github.com/gopito/CiHomeTask/blob/master/pictures/badge_string.png)
 
 Смысл домашки в том чтобы поправить приложение так чтобы все тесты проходили. Это будет видно на 
 бэйдже в репозитории. 
