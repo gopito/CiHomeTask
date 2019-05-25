@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/irvasek/CiHomeTask.svg?style=svg)](https://circleci.com/gh/irvasek/CiHomeTask)
+[![CircleCI](https://circleci.com/gh/irvasek/CiHomeTask.svg?style=svg)](https://circleci.com/gh/irvasek/CiHomeTask/tree/master)
 ## Домашнее задание по тестированию и CI
 Для выполнения задания надо форкнуть себе репозиторий и поправить ошибки в приложении, чтобы все тесты
 проходили. В репозитории 4 теста, т.е. надо найти и поправить 4 ошибки.
