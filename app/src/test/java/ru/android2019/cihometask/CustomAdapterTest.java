@@ -45,6 +45,4 @@ public class CustomAdapterTest {
                 "Нумерация с 0.\n\r" +
                 Arrays.toString(strings), textItems.size()), middleItemIndex, customAdapter.getMiddleIndex());
     }
-
-
 }
