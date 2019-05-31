@@ -40,11 +40,9 @@ public class CustomAdapterTest {
 
     @Test
     public void middleItemTest() {
-        int middleItemIndex = textItems.size() / 2;
+        int middleItemIndex = textItems.size() / 3;
         Assert.assertEquals(String.format("Неправильно вычисляется середина массива из %d элементов. " +
                 "Нумерация с 0.\n\r" +
                 Arrays.toString(strings), textItems.size()), middleItemIndex, customAdapter.getMiddleIndex());
     }
-
-
 }

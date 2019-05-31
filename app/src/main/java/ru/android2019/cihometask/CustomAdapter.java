@@ -99,9 +99,9 @@ import java.util.List;
             @Override
             public void onClick(View v) {
                 if (viewHolder.isClicked) {
-                    viewHolder.getTextView().setText(mDataSet.get(position));
+                    viewHolder.getTextView().setText(mDataSet.get(position - 1));
                 } else {
-                    viewHolder.getTextView().setText(String.format("%s %s", mDataSet.get(position), "Clicked"));
+                    viewHolder.getTextView().setText(String.format("%s %s", mDataSet.get(position - 1), "Clicked"));
                     viewHolder.setClicked(true);
                 }
 
@@ -117,7 +117,7 @@ import java.util.List;
     // Return the size of your data set (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return mDataSet.size() - 1;
+        return mDataSet.size();
     }
 
 }
