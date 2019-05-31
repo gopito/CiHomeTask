@@ -99,12 +99,12 @@ import java.util.List;
             @Override
             public void onClick(View v) {
                 if (viewHolder.isClicked) {
-                    viewHolder.getTextView().setText(mDataSet.get(position - 1));
+                    viewHolder.getTextView().setText(mDataSet.get(position));
+                    viewHolder.setClicked(false);
                 } else {
-                    viewHolder.getTextView().setText(String.format("%s %s", mDataSet.get(position - 1), "Clicked"));
+                    viewHolder.getTextView().setText(String.format("%s %s", mDataSet.get(position), "Clicked"));
                     viewHolder.setClicked(true);
                 }
-
             }
         });
 
