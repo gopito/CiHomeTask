@@ -111,7 +111,7 @@ import java.util.List;
     }
 
     int getMiddleIndex() {
-        return mDataSet.size() / 3;
+        return mDataSet.size() / 2;
     }
 
     // Return the size of your data set (invoked by the layout manager)
