@@ -100,6 +100,7 @@ import java.util.List;
             public void onClick(View v) {
                 if (viewHolder.isClicked) {
                     viewHolder.getTextView().setText(mDataSet.get(position));
+                    viewHolder.setClicked(false);
                 } else {
                     viewHolder.getTextView().setText(String.format("%s %s", mDataSet.get(position), "Clicked"));
                     viewHolder.setClicked(true);
